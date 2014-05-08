@@ -1,0 +1,8 @@
+In:
+
+bananaa bana
+
+
+Out:
+
+YES

@@ -1,0 +1,8 @@
+In:
+
+abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+
+
+Out:
+
+YES

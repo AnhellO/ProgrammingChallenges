@@ -1,0 +1,8 @@
+In:
+
+banana bas
+
+
+Out:
+
+NO
