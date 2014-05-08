@@ -9,11 +9,11 @@ using namespace std;
 * if not, check if we're in a piece of land ('+'), then check if it is coast just by looking at the 
 * cardinal points, if it is, increment the counter:
 *
-*				   N
-*				   ↑
+*			        N
+*				↑
 *			 W ← [i, j] → E
-*				   ↓
-*				   S
+*		        	↓
+*				S
 *
 */
 int n, m, i, j, cont = 0;
