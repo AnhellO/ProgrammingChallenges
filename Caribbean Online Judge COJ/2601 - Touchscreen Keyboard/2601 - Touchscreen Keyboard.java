@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 /*
-* Author: Angel Santiago Jaime Zavala (AnhellO)
+* Author: Angel Santiago Jaime Zavala (AnhellO) & CoyoteCOJ (Alfareo)
 * Caribbean Online Judge COJ: 2601 - Touchscreen Keyboard
 * 
 * Store the keyboard in a matrix and iterate over it, first, searching the position of the chars of
