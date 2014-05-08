@@ -3,6 +3,9 @@
 using namespace std;
 
 /*
+* Author: Angel Santiago Jaime Zavala (AnhellO)
+* Caribbean Online Judge COJ: 2360 - Tetris
+*
 * A little bit long to implement. Basically the idea here is to create a vector with the number
 * of columns, and three vectors that simulates the pieces according to its size and drop (2, 3, or 4 squares area).
 * The next step is to check which piece is given, and constructing it with a piece vector, and for the piece given,
