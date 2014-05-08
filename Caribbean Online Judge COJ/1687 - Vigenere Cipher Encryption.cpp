@@ -3,17 +3,17 @@
 using namespace std;
 /*
 * Author: Angel Santiago Jaime Zavala (AnhellO)
-* Caribbean Online Judge COJ - 
+* Caribbean Online Judge COJ: Vigenere Cypher Encryption
 *
 * This problem is easy, just use some ASCII (alphabet 65 to 90 A - B respectively for every letter)
-* operations to change the ith char from the given word to the jth char from the given encryption 
-* key, the hard case is when you have to rotate the alphabet (if some key char + some word 
+* operations to change the ith char from the given word to the jth char from the given encryption
+* key, the hard case is when you have to rotate the alphabet (if some key char + some word
 * char sums more than 90), then, you just have to update the number of chars to be displaced
 */
 int i, j, displace;
 string key, word;
 
-int main() 
+int main()
 {
 	while(cin >> key && key != "0") //Check if '0'
 	{
