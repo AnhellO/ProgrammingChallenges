@@ -130,7 +130,7 @@ class TouchScreen
 		return dist;
 	}
         
-	static void posicion(char a, char x[][])
+    static void posicion(char a, char x[][])
     {
     	int e, f;
 		i = 0;
