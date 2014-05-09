@@ -5,24 +5,24 @@ using namespace std;
 * Autor: Angel Santiago Jaime Zavala (AnhellO)
 * Caribbean Online Judge COJ: 2690 - Multiplying Matrices
 *
-* De acuerdo a la teoría de la multiplicación de matrices:
-* Dos matrices A y B son multiplicables si el número de columnas de A coincide con el número de filas de B.
+* De acuerdo a la teorï¿½a de la multiplicaciï¿½n de matrices:
+* Dos matrices A y B son multiplicables si el nï¿½mero de columnas de A coincide con el nï¿½mero de filas de B.
 * ----> M[m x n] x M[n x p] = M [m x p]
 * El elemento cij de la matriz producto se obtiene multiplicando cada elemento de la fila i de la matriz A
-* por cada elemento de la columna j de la matriz B y sumándolos.
+* por cada elemento de la columna j de la matriz B y sumï¿½ndolos.
 */
 int N, M, R, C, i, j, k, sum;
 
 int main()
 {
-	scanf("%d %d", &N, &M); //Tamaño y llenado de la matriz A
+	scanf("%d %d", &N, &M); //Tamaï¿½o y llenado de la matriz A
 	int matrix1[N][M];
 	FOR(i, 0, N, 1)
 		FOR(j, 0, M, 1)
 			scanf("%d", &matrix1[i][j]);
-	scanf("%d %d", &R, &C); //Leemos el tamaño de la segunda matriz
-	if(M != R) //y validamos si el número de columnas de la matriz A no coincide con el número de filas de B,
-                //dando como resultado que no se puede realizar la multiplicación de matrices
+	scanf("%d %d", &R, &C); //Leemos el tamaï¿½o de la segunda matriz
+	if(M != R) //y validamos si el nï¿½mero de columnas de la matriz A no coincide con el nï¿½mero de filas de B,
+                //dando como resultado que no se puede realizar la multiplicaciï¿½n de matrices
 		printf("The matrices can not be multiplied\n");
 	else //Pero si se puede realizar.....
 	{
@@ -30,16 +30,16 @@ int main()
 		FOR(i, 0, R, 1)
 			FOR(j, 0, C, 1)
 				scanf("%d", &matrix2[i][j]);
-		FOR(i, 0, N, 1) //Para cada una de las filas de la primer matriz
+		FOR(i, 0, N, 1) //Para cada una de las filas de la matriz A
 		{
-			FOR(j, 0, C, 1) //Y para cada una de las columnas de la matriz
+			FOR(j, 0, C, 1) //Y para cada una de las columnas de la matriz B
 			{
 				sum = 0;
-				FOR(k, 0, M, 1) //Multiplica el iésimo elemento de la fila actual de matriz A con el iésimo de la matriz B
+				FOR(k, 0, M, 1) //Multiplica el iï¿½simo elemento de la fila actual de matriz A con el iï¿½simo de la matriz B
 				{
 					sum += (matrix1[i][k] * matrix2[k][j]); //Se almacenan en la suma
 				}
-				(j < C - 1) ? printf("%d ", sum) : printf("%d\n", sum); //Directamente mandamos a imprimir el resultado de la iésima multiplicación
+				(j < C - 1) ? printf("%d ", sum) : printf("%d\n", sum); //Directamente mandamos a imprimir el resultado de la iï¿½sima multiplicaciï¿½n
 			}
 		}
 	}
