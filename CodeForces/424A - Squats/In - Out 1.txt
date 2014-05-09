@@ -1,0 +1,10 @@
+In:
+
+4
+xxXx
+
+
+Out:
+
+1
+XxXx
