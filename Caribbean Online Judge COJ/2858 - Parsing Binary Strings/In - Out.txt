@@ -1,0 +1,8 @@
+In:
+
+welcometothe101acmicpcctcweexpecttohave111011100110101100101001101011editionsmore
+
+
+Out:
+
+welcometothe5acmicpcctcweexpecttohave100editionsmore
