@@ -1,0 +1,10 @@
+In:
+
+50
+50
+80
+
+
+Out:
+
+Isosceles
