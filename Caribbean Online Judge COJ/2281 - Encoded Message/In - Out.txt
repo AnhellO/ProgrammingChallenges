@@ -1,0 +1,13 @@
+In:
+
+3
+RSTEEOTCP
+eedARBtVrolsiesuAoReerles
+EarSvyeqeBsuneMa
+
+
+Out:
+
+TOPSECRET
+RosesAreRedVioletsAreBlue
+SquaresMayBeEven

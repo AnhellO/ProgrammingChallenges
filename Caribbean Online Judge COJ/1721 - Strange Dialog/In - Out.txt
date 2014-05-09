@@ -1,0 +1,15 @@
+In:
+
+4
+putonone
+inoneputin
+oneininputwooutoutput
+inputonoutput
+
+
+Out:
+
+YES
+NO
+NO
+YES

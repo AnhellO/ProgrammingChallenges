@@ -1,0 +1,10 @@
+In:
+
+Anders
+13 83
+
+
+
+Out:
+
+Anders 70

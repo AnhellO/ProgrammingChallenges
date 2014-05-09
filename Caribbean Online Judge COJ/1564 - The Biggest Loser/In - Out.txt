@@ -1,0 +1,22 @@
+In:
+
+12
+Carlos M 110.850 80.350
+Nadia F 125.325 94.650
+Amanda F 100.250 73.850
+Paul M 96.365 70.500
+Fred M 136.750 95.750
+Kandy F 99.000 70.850
+Ray M 115.800 75.550
+Curtis M 145.975 98.250
+Athenea F 129.350 91.450
+Gisel F 105.950 80.250
+Eduardo M 109.500 77.300
+Barbie F 145.875 105.000
+0 
+
+
+
+Out:
+
+Ray 34.76% Athenea 29.30%

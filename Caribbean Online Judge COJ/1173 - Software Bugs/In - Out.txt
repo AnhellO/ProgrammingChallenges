@@ -1,0 +1,23 @@
+In:
+
+print "No bugs here..."
+
+void hello() {
+BUGBUG
+printfBUG("Hello, world!\n");
+}
+
+wriBUGBUGtelBUGn("Hello B-U-G");
+
+
+
+Out:
+
+print "No bugs here..."
+
+void hello() {
+
+printf("Hello, world!\n");
+}
+
+writeln("Hello B-U-G");
