@@ -1,0 +1,10 @@
+In:
+
+suma 10
+suma 5
+resta 3
+
+
+Out:
+
+resultado: 12

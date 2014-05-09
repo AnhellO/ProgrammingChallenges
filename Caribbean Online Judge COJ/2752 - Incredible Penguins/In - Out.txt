@@ -1,0 +1,14 @@
+In:
+
+4
+Luis 5
+Julia -23
+Aniceto 14
+Vivian -5
+
+
+Out:
+
+FOREVER ALONE ones:
+Julia
+Aniceto
