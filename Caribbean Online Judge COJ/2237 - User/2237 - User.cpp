@@ -49,10 +49,8 @@ bool checkBack(vector<string> V, string s, int j)
 	int i;
 	FOR(i, 0, V.size(), 1)
 		if(j != i)
-		{
 			if(V[i].find(s) != std::string::npos)
 				return true;
-		}
 	return false;
 }
 
