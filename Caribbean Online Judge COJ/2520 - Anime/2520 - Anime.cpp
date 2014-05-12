@@ -3,10 +3,10 @@
 #include <algorithm>
 using namespace std;
 /*
-** Autor: Angel Jaime
-** COJ
-** 2520 Anime
-** Solución por medio de diagrama de flujo, Sorting y Binary Search
+* Autor: Angel Jaime
+* COJ
+* 2520 Anime
+* Solución por medio de diagrama de flujo, Sorting y Binary Search
 */
 
 #define LECTURA(t) while(t--)
@@ -26,7 +26,7 @@ int main()
         VECTOR recorded(J), missed, mustDelete, fillers(F);
         //Se resetean los contadores para cada caso
         RESTART(contMustDelete, contMissed);
-       CICLO(i, 0, J, 1)
+        CICLO(i, 0, J, 1)
         {
             scanf("%d", &recorded[i]);
             if(recorded[i] <= P)//Validamos si el capitulo ya fue visto por Pavel
@@ -75,7 +75,7 @@ int main()
         else
             printf("%d\n", 0);
         
-		if(contMustDelete)
+	if(contMustDelete)
         {
             printf("%d ", contMustDelete);
             CICLO(i, 0, mustDelete.size(), 1)
