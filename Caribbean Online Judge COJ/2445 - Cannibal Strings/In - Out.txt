@@ -1,0 +1,8 @@
+In:
+
+CannibalStrings
+
+
+Out:
+
+C

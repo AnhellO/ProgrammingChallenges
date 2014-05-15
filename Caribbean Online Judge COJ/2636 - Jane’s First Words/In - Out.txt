@@ -1,0 +1,22 @@
+In:
+
+aaaa
+eeeh
+auwww
+dda
+daaada
+daddy
+ouuuww
+dadi
+
+
+Out:
+
+Cooing
+Cooing
+Cooing
+Cooing
+Cooing
+She called me!!!
+Cooing
+She called me!!!
