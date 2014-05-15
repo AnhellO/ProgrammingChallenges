@@ -1,0 +1,13 @@
+In:
+
+1
+2
+0
+
+
+Out:
+
+Case 1:
+n = 1, diamonds = 1
+Case 2:
+n = 2, diamonds = 5
