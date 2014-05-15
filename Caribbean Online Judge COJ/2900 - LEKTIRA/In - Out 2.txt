@@ -1,0 +1,8 @@
+In:
+
+mobitel
+
+
+Out:
+
+bometil
