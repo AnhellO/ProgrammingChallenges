@@ -26,9 +26,6 @@ In:
 
 Out:
 
-M
-T
-L
 L
 L
 M
