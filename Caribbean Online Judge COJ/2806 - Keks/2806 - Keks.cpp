@@ -15,7 +15,7 @@ int main()
     for(i = N - 1 ; i >= 0 ; i--) 
         pos[number[i] - '0'].push_back(i);
 
-	x = 0, y = N - K;
+    x = 0, y = N - K;
     for(i = 0 ; i < y ; i++)
     {
         for(j = 9 ; j >= 0 ; j--) 
