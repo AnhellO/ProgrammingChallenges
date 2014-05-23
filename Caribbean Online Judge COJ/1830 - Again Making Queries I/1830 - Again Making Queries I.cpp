@@ -12,10 +12,10 @@ long long int getRangeSum(long long int, long long int, long long int[]);
 
 int main()
 {
-	scanf("%lld %lld %lld", &N, &U, &Q);
-	long long int cells[N];
-	FILL(N, cells);
-	WHILE(U)
+    scanf("%lld %lld %lld", &N, &U, &Q);
+    long long int cells[N];
+    FILL(N, cells);
+    WHILE(U)
     {
         scanf("%lld %lld", &i, &k);
         update(i, k, cells);
