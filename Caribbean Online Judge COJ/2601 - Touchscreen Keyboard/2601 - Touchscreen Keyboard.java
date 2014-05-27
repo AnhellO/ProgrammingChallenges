@@ -17,7 +17,7 @@ class TouchScreen
     public static void main(String[] args) throws IOException 
     {
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-		int k, x, cont, y, t, l, aux, distances[];
+	int k, x, cont, y, t, l, aux, distances[];
         String base, p;
         String div[], words[];
         char matriz[][]={{'q','w','e','r','t','y','u','i','o','p'},
