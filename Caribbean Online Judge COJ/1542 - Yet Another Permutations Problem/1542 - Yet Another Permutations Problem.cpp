@@ -14,8 +14,8 @@ int main()
 		while(N)
 		{
 			if(N & 1) aux = (aux * perm) % mod;
-                perm = (perm * perm) % mod;
-                N /= 2;
+                	perm = (perm * perm) % mod;
+                	N /= 2;
 		}
 		printf("%llu\n", aux);
 	}
