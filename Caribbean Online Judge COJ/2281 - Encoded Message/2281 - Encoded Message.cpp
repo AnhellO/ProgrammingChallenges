@@ -27,12 +27,12 @@ int main()
 			}
 		cont = 0;
 		FOR2(i, N - 1, 0, 1)
-	    {
-	        FOR1(j, 0, N, 1)
-	            decode[cont][j] = matrix[j][i];
-	        cont++;
-	    }
-	    FOR1(i, 0, N, 1)
+	    	{
+	        	FOR1(j, 0, N, 1)
+	            		decode[cont][j] = matrix[j][i];
+	        	cont++;
+	    	}
+	    	FOR1(i, 0, N, 1)
 			FOR1(j, 0, N, 1)
 				cout << decode[i][j];
 		cout << endl;
