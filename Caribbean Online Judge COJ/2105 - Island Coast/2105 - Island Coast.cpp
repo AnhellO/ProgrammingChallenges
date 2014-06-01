@@ -20,16 +20,16 @@ int n, m, i, j, cont = 0;
 
 int main() 
 {
-    scanf("%d %d", &n, &m);
+    	scanf("%d %d", &n, &m);
 	char island[n][m];
 	for(i = 0 ; i < n ; i++)
 		for(j = 0 ; j < m ; j++)
 			scanf(" %c", &island[i][j]);
 	for(i = 0 ; i < n ; i++)
 		for(j = 0 ; j < m ; j++)
-    	    if(i && j && island[i][j] == '+')
-                if(island[i - 1][j] == '-' || island[i][j - 1]  == '-' || island[i + 1][j]  == '-' || island[i][j + 1]  == '-')
-                    cont++;
-    printf("%d\n", cont);
+    	    		if(i && j && island[i][j] == '+')
+                		if(island[i - 1][j] == '-' || island[i][j - 1]  == '-' || island[i + 1][j]  == '-' || island[i][j + 1]  == '-')
+                    			cont++;
+    	printf("%d\n", cont);
 	return 0;
 }
