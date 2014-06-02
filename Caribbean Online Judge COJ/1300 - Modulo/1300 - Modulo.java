@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Vector;
 /*
 * Autor: Angel Jaime
-* 1483 - Geometrical Task I. COJ
+* 1300 - Modulo. COJ
 * 
 * Problema de nivel medio - facil en la dificultad novatos, implica el uso de la clase Vector, o lo que bien
 * se puede llamar: Arreglos Dinamicos. Un arreglo dinamico tiene la ventaja de que puede expandir
