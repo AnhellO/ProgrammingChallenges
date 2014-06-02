@@ -1,0 +1,13 @@
+In:
+
+3
+6
+12
+3
+
+
+Out:
+
+Perfect
+Abundant
+Deficient

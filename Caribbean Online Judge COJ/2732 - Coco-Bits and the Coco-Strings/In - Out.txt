@@ -1,0 +1,13 @@
+In:
+
+3
+a
+BcD
+FeeU
+
+
+Out:
+
+A
+bCd
+fEEu
