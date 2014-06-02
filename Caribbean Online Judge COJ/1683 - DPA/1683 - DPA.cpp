@@ -2,7 +2,7 @@
 using namespace std;
 /*
 * Autor: Angel Jaime
-* 2732 - Coco-Bits and the Coco-Strings. COJ
+* 1683 - DPA. COJ
 *
 * Problema de simulacion. Solamente hay que leer el numero de casos a procesar, y para cada caso
 * realizar una sumatoria desde 1 hasta N - 1, de todos aquellos numeros entre los que N sea divisible,
