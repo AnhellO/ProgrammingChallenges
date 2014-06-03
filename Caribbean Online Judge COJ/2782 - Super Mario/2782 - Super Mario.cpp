@@ -21,31 +21,31 @@ int dy[4] = {1, -1, 0, 0};
 
 int bfs(int x, int y, int H, int W)
 {
-	int i;
-    Route beginning(x, y, 0);
-    queue<Route> Q;
-    Q.push(beginning);
-    memset(visited, false, sizeof(visited));
-    p[x][y] = Route(-1 , -1, -1);
-    while(!Q.empty())
-    { 
-    	Route actual = Q.front();
-       	Q.pop();
-       	if(ady[actual.x][actual.y] == '#') return actual.d;
-       	visited[actual.x][actual.y] = true;
-       	for(i = 0 ; i < 4 ; i++)
-       	{
-          	int nx = dx[i] + actual.x;
-          	int ny = dy[i] + actual.y;
-          	if(nx >= 0 && nx < H && ny >= 0 && ny < W && ady[nx][ny] != '*' && !visited[nx][ny])
-          	{
-             	Route adyacent(nx, ny, actual.d + 1);
-             	Q.push(adyacent);
-             	p[nx][ny] = actual;
-          	}
-       }
-    }
-    return -1;
+    	int i;
+    	Route beginning(x, y, 0);
+    	queue<Route> Q;
+    	Q.push(beginning);
+    	memset(visited, false, sizeof(visited));
+    	p[x][y] = Route(-1 , -1, -1);
+    	while(!Q.empty())
+    	{ 
+    		Route actual = Q.front();
+       		Q.pop();
+       		if(ady[actual.x][actual.y] == '#') return actual.d;
+       		visited[actual.x][actual.y] = true;
+       		for(i = 0 ; i < 4 ; i++)
+       		{
+          		int nx = dx[i] + actual.x;
+          		int ny = dy[i] + actual.y;
+          		if(nx >= 0 && nx < H && ny >= 0 && ny < W && ady[nx][ny] != '*' && !visited[nx][ny])
+          		{
+             			Route adyacent(nx, ny, actual.d + 1);
+             			Q.push(adyacent);
+             			p[nx][ny] = actual;
+          		}
+       		}
+    	}
+    	return -1;
 }
 
 int main() 
