@@ -1,0 +1,12 @@
+In:
+
+some blocks
+of text line up
+well on the right,
+but
+some don't.
+
+
+Out:
+
+283
