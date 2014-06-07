@@ -1,0 +1,11 @@
+In:
+
+2
+ANBOBNA
+iAmACoolCompany
+
+
+Out:
+
+YES
+NO
