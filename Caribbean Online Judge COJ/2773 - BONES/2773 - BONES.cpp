@@ -17,18 +17,18 @@ int getSum(int a[])
 
 int findMin(vector<int> V)
 {
-    int i, max = 0, min = 0;
-    sort(V.begin(), V.end());
-    vector<int> counters(V[V.size() - 1]);
-    FOR(i, 0, V.size(), 1)
-	counters[V[i] - 1]++;
-    FOR(i, 0, counters.size(), 1)
-    	if(counters[i] > max)
-    	{
-    		min = i;
-    		max = counters[i];
-    	}
-    return min + 1;
+    	int i, max = 0, min = 0;
+    	sort(V.begin(), V.end());
+    	vector<int> counters(V[V.size() - 1]);
+    	FOR(i, 0, V.size(), 1)
+		counters[V[i] - 1]++;
+    	FOR(i, 0, counters.size(), 1)
+    		if(counters[i] > max)
+    		{
+    			min = i;
+    			max = counters[i];
+    		}
+    	return min + 1;
 }
 
 int main() 
