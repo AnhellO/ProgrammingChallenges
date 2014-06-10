@@ -1,0 +1,10 @@
+In:
+
+Hola mundo
+Esto es Coding Rush!
+
+
+Out:
+
+"Hola mundo" tiene 10 caracteres
+"Esto es Coding Rush!" tiene 20 caracteres

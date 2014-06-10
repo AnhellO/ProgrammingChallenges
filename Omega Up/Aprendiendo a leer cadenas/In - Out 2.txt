@@ -1,0 +1,10 @@
+In:
+
+Hasta la vista...
+baby!
+
+
+Out:
+
+"Hasta la vista..." tiene 17 caracteres
+"baby!" tiene 5 caracteres

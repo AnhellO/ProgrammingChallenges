@@ -1,0 +1,11 @@
+In:
+
+ITAM
+
+
+Out:
+
+I
+T
+A
+M
