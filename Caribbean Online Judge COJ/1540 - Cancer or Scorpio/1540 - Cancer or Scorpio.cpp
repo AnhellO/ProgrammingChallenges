@@ -12,9 +12,9 @@ string line;
 
 void DatePlusDays(struct tm* date, int days)
 {
-    	const time_t ONE_DAY = 24 * 60 * 60 ;
-    	time_t date_seconds = mktime(date) + (days * ONE_DAY) ;
-    	*date = *localtime(&date_seconds) ; ;
+    	const time_t ONE_DAY = 24 * 60 * 60;
+    	time_t date_seconds = mktime(date) + (days * ONE_DAY);
+    	*date = *localtime(&date_seconds);
 }
 
 int toInteger(string n)
