@@ -41,7 +41,7 @@ int iterate(vector<int>, vector<int>);
 int main()
 {
     scanf("%d %d", &c, &piece); //leer columnas y piezas
-    vector<int> columns(c); //se crea vector del tama�o de las columnas
+    vector<int> columns(c); //se crea vector del tamano de las columnas
     for(i = 0 ; i < c ; i++) //ciclo para asignar valores iniciales de acuerdo a las columnas ya establecidas
     {
         scanf("%d", &columns[i]);
@@ -50,9 +50,9 @@ int main()
     switch(piece) //dependiendo la pieza
     {
         case 1: //pieza 1: dos acomodos
-            waysTo += c; //se suman por default las permutaciones de la pieza 1 en 90�
-            piece3[0] = piece3[1] = piece3[2] = piece3[3] = 1;  //se inicializa vector simulando la pieza a 180�
-            waysTo += iterate(columns, piece3); //sumamos valor retornado por el m�todo
+            waysTo += c; //se suman por default las permutaciones de la pieza 1 en 90 grados
+            piece3[0] = piece3[1] = piece3[2] = piece3[3] = 1;  //se inicializa vector simulando la pieza a 180 grados
+            waysTo += iterate(columns, piece3); //sumamos valor retornado por el metodo
             break;
         case 2: //pieza 2: un acomodo
             piece1[0] = piece1[1] = 1;
@@ -132,10 +132,10 @@ int main()
 int iterate(vector<int> columns, vector<int> piece)
 {
     int i, j = 0, cont = 0;
-    for(i = 0 ; i < columns.size() ; i++) //iniciamos iteraci�n sobre el vector mayor
+    for(i = 0 ; i < columns.size() ; i++) //iniciamos iteracion sobre el vector mayor
     {
         vector<int> temp = columns;
-        if(piece.size() + i > columns.size()) //si el tama�o de la pieza excede el l�mite de columnas, no iterar
+        if(piece.size() + i > columns.size()) //si el tamano de la pieza excede el limite de columnas, no iterar
         {
             return cont;
             break;
