@@ -2,12 +2,12 @@
 #include <vector>
 using namespace std;
 /*
-* Autor: Angel Jaime
+* Autores: Angel Jaime, Santiago Chio (schiob), Luis Angel Salas
 * 2360 - Tetris - COJ
 *
 * Problema mas complicado del concurso, solucion trivial y larga de implementar.
 * Basicamente la idea aqui es crear un vector que represente el numero de columnas
-* y tres vectores que simulen a las piezas acorde a su tamaño y forma de caida (2, 3, o 4 cuadrados de area).
+* y tres vectores que simulen a las piezas acorde a su tamaï¿½o y forma de caida (2, 3, o 4 cuadrados de area).
 * El siguiente paso es checar que pieza es dada, construirla con un vector, y para esa pieza dada,
 * verificar todas sus posibles posiciones y ver si encajan en el area de Tetris sin dejar ningun cuadrado libre
 * El area de Tetris y una pieza seran representados con un 0 para cuadrados vacios, y dependiendo de cuantos cuadrados
@@ -41,7 +41,7 @@ int iterate(vector<int>, vector<int>);
 int main()
 {
     scanf("%d %d", &c, &piece); //leer columnas y piezas
-    vector<int> columns(c); //se crea vector del tamaño de las columnas
+    vector<int> columns(c); //se crea vector del tamaï¿½o de las columnas
     for(i = 0 ; i < c ; i++) //ciclo para asignar valores iniciales de acuerdo a las columnas ya establecidas
     {
         scanf("%d", &columns[i]);
@@ -50,9 +50,9 @@ int main()
     switch(piece) //dependiendo la pieza
     {
         case 1: //pieza 1: dos acomodos
-            waysTo += c; //se suman por default las permutaciones de la pieza 1 en 90°
-            piece3[0] = piece3[1] = piece3[2] = piece3[3] = 1;  //se inicializa vector simulando la pieza a 180°
-            waysTo += iterate(columns, piece3); //sumamos valor retornado por el método
+            waysTo += c; //se suman por default las permutaciones de la pieza 1 en 90ï¿½
+            piece3[0] = piece3[1] = piece3[2] = piece3[3] = 1;  //se inicializa vector simulando la pieza a 180ï¿½
+            waysTo += iterate(columns, piece3); //sumamos valor retornado por el mï¿½todo
             break;
         case 2: //pieza 2: un acomodo
             piece1[0] = piece1[1] = 1;
@@ -132,10 +132,10 @@ int main()
 int iterate(vector<int> columns, vector<int> piece)
 {
     int i, j = 0, cont = 0;
-    for(i = 0 ; i < columns.size() ; i++) //iniciamos iteración sobre el vector mayor
+    for(i = 0 ; i < columns.size() ; i++) //iniciamos iteraciï¿½n sobre el vector mayor
     {
         vector<int> temp = columns;
-        if(piece.size() + i > columns.size()) //si el tamaño de la pieza excede el límite de columnas, no iterar
+        if(piece.size() + i > columns.size()) //si el tamaï¿½o de la pieza excede el lï¿½mite de columnas, no iterar
         {
             return cont;
             break;
