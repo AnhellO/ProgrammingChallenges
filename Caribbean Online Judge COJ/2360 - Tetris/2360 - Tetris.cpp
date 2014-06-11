@@ -1,41 +1,64 @@
 #include <cstdio>
 #include <vector>
 using namespace std;
-
 /*
-* Author: Angel Santiago Jaime Zavala (AnhellO)
-* Caribbean Online Judge COJ: 2360 - Tetris
+* Autor: Angel Jaime
+* 2360 - Tetris - COJ
 *
-* A little bit long to implement. Basically the idea here is to create a vector with the number
-* of columns, and three vectors that simulates the pieces according to its size and drop (2, 3, or 4 squares area).
-* The next step is to check which piece is given, and constructing it with a piece vector, and for the piece given,
-* check all the possible positions and if they fix in the Tetris area without leaving a free square
+* Problema mas complicado del concurso, solucion trivial y larga de implementar.
+* Basicamente la idea aqui es crear un vector que represente el numero de columnas
+* y tres vectores que simulen a las piezas acorde a su tamaño y forma de caida (2, 3, o 4 cuadrados de area).
+* El siguiente paso es checar que pieza es dada, construirla con un vector, y para esa pieza dada,
+* verificar todas sus posibles posiciones y ver si encajan en el area de Tetris sin dejar ningun cuadrado libre
+* El area de Tetris y una pieza seran representados con un 0 para cuadrados vacios, y dependiendo de cuantos cuadrados
+* esten ocupados, se utilizaran valores numericos de 1 hasta el ultimo cuadrado ocupado en caso de posiciones verticales,
+* y del mismo valor numerico para los cuadrados ocupados en posicion horizontal sin preocuparnos por pasarnos de altura, ya que en el juego
+* de Tetris originalmente no pasa nada si te pasas de altura en alguna columna, por ejemplo, tomemos 4 columnas en total:
+*
+*             |[0][0][0][0]|
+*             |[0][0][0][0]|
+*             |[0][0][0][0]|
+*             |[0][0][0][0]|
+* Area Vacia: |[0][0][0][0]|
+*
+*                                    |[0][0][0][0]|
+*                                    |[0][0][0][4]|
+*                                    |[3][0][3][3]|
+*                                    |[2][2][2][2]|
+* Area Ocupada sin cuadrados libres: |[1][1][1][1]|
+*
+*
+*                                    |[0][0][0][0]|
+*                                    |[0][0][0][0]|
+*                                    |[3][0][0][0]|
+*                                    |[2][2][2][2]|
+* Area Ocupada con cuadrados libres: |[1][1][1][0]|
 */
-
-#define ciclo(i, a, b, c) for(i = a ; i < b ; i += c)
 int c, piece, i, waysTo = 0;
 vector<int> piece1(2, 0), piece2(3, 0), piece3(4, 0);
 int iterate(vector<int>, vector<int>);
 
 int main()
 {
-    scanf("%d %d", &c, &piece);
-    vector<int> columns(c); //With the number of columns
-    ciclo(i, 0, c, 1) //Read occupied squares
-        scanf("%d", &columns[i]);
-
-    switch(piece) //According to the piece given
+    scanf("%d %d", &c, &piece); //leer columnas y piezas
+    vector<int> columns(c); //se crea vector del tamaño de las columnas
+    for(i = 0 ; i < c ; i++) //ciclo para asignar valores iniciales de acuerdo a las columnas ya establecidas
     {
-        case 1: //Piece 1: two ways
-            waysTo += c; //default sum of the area of the piece 1 on 90Â°
-            piece3[0] = piece3[1] = piece3[2] = piece3[3] = 1;  //simulating the piece at 180Â°
-            waysTo += iterate(columns, piece3); //get ways to fix the piece in the columns
+        scanf("%d", &columns[i]);
+    }
+
+    switch(piece) //dependiendo la pieza
+    {
+        case 1: //pieza 1: dos acomodos
+            waysTo += c; //se suman por default las permutaciones de la pieza 1 en 90°
+            piece3[0] = piece3[1] = piece3[2] = piece3[3] = 1;  //se inicializa vector simulando la pieza a 180°
+            waysTo += iterate(columns, piece3); //sumamos valor retornado por el método
             break;
-        case 2: //Piece 2: one way
+        case 2: //pieza 2: un acomodo
             piece1[0] = piece1[1] = 1;
             waysTo += iterate(columns, piece1);
             break;
-        case 3: //Piece 3: two ways
+        case 3: //pieza 3: dos acomodos
             piece2[0] = 1;
             piece2[1] = 0;
             piece2[2] = 0;
@@ -44,7 +67,7 @@ int main()
             piece1[1] = 1;
             waysTo += iterate(columns, piece1);
             break;
-        case 4: //Piece 4: two ways
+        case 4: //pieza 4: dos acomodos
             piece2[0] = 0;
             piece2[1] = 0;
             piece2[2] = 1;
@@ -53,53 +76,53 @@ int main()
             piece1[1] = 0;
             waysTo += iterate(columns, piece1);
             break;
-        case 5: //Piece 5: four ways
+        case 5: //pieza 5: cuatro acomodos
             piece2[0] = 0;
             piece2[1] = 0;
             piece2[2] = 0;
-            waysTo += iterate(columns, piece2); // Inverted T
+            waysTo += iterate(columns, piece2); // T invertida
             piece2[0] = 0;
             piece2[1] = 1;
             piece2[2] = 0;
-            waysTo += iterate(columns, piece2); // Normal T
+            waysTo += iterate(columns, piece2); // T normal
             piece1[0] = 0;
             piece1[1] = 1;
-            waysTo += iterate(columns, piece1); // Left T
+            waysTo += iterate(columns, piece1); // T izquierda
             piece1[0] = 1;
             piece1[1] = 0;
-            waysTo += iterate(columns, piece1); // Right T
+            waysTo += iterate(columns, piece1); // T derecha
             break;
-        case 6: //Piece 6: four ways
+        case 6: //pieza 6: cuatro acomodos
             piece2[0] = 0;
             piece2[1] = 0;
             piece2[2] = 0;
-            waysTo += iterate(columns, piece2); // Dropped L
+            waysTo += iterate(columns, piece2); // L acostada
             piece2[0] = 1;
             piece2[1] = 0;
             piece2[2] = 0;
-            waysTo += iterate(columns, piece2); // Prone L
+            waysTo += iterate(columns, piece2); // L boca-abajo
             piece1[0] = 1;
             piece1[1] = 1;
-            waysTo += iterate(columns, piece1); // Normal L
+            waysTo += iterate(columns, piece1); // L normal
             piece1[0] = 0;
             piece1[1] = 2;
-            waysTo += iterate(columns, piece1); // Inverted L
+            waysTo += iterate(columns, piece1); // L invertida
             break;
-        case 7: //Piece 7: four ways
+        case 7: //pieza 7: cuatro acomodos
             piece2[0] = 0;
             piece2[1] = 0;
             piece2[2] = 0;
-            waysTo += iterate(columns, piece2); // Dropped L
+            waysTo += iterate(columns, piece2); // L acostada
             piece2[0] = 0;
             piece2[1] = 0;
             piece2[2] = 1;
-            waysTo += iterate(columns, piece2); // Prone L
+            waysTo += iterate(columns, piece2); // L boca-abajo
             piece1[0] = 1;
             piece1[1] = 1;
-            waysTo += iterate(columns, piece1); // Normal L
+            waysTo += iterate(columns, piece1); // L normal
             piece1[0] = 2;
             piece1[1] = 0;
-            waysTo += iterate(columns, piece1); // Left L
+            waysTo += iterate(columns, piece1); // L izquierda
             break;
     }
     printf("%d\n", waysTo);
@@ -109,22 +132,22 @@ int main()
 int iterate(vector<int> columns, vector<int> piece)
 {
     int i, j = 0, cont = 0;
-    ciclo(i, 0, columns.size(), 1) //Iterating over the Tetris area
+    for(i = 0 ; i < columns.size() ; i++) //iniciamos iteración sobre el vector mayor
     {
         vector<int> temp = columns;
-        if(piece.size() + i > columns.size()) //if we get to the last column
+        if(piece.size() + i > columns.size()) //si el tamaño de la pieza excede el límite de columnas, no iterar
         {
             return cont;
             break;
         }
-        if(piece.size() == 2) //For a size-two piece, check if fix in two squares
+        if(piece.size() == 2) //si el acomodo de la pieza ocupa dos cuadros
         {
             temp[i] = piece[j] + temp[i];
             temp[i + 1] = piece[j + 1] + temp[i + 1];
             if(temp[i] == temp[i + 1])
                 cont++;
         }
-        else if(piece.size() == 3) //For a size-three piece, check if fix in three squares
+        else if(piece.size() == 3) //si el acomodo de la pieza ocupa tres cuadros
         {
             temp[i] = piece[j] + temp[i];
             temp[i + 1] = piece[j + 1] + temp[i + 1];
@@ -132,7 +155,7 @@ int iterate(vector<int> columns, vector<int> piece)
             if(temp[i] == temp[i + 1] && temp[i + 1] == temp[i + 2])
                 cont++;
         }
-        else if(piece.size() == 4) //For a size-four piece, check if fix in four squares
+        else if(piece.size() == 4) //si el acomodo de la pieza ocupa cuatro cuadros
         {
             temp[i] = piece[j] + temp[i];
             temp[i + 1] = piece[j + 1] + temp[i + 1];

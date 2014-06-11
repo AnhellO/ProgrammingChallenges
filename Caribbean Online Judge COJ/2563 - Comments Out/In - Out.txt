@@ -1,0 +1,22 @@
+In:
+
+#@Algorithm to find Fibonacci numbers@#
+int fib(int n#@param #@ represent term to find @#@#)
+{
+       #@if is the first or second term@#
+       if(n==0||n==1)
+              return 1;
+       return fib(n-1)+fib(n-2);
+}#@end@#
+
+
+Out:
+
+
+int fib(int n)
+{
+       
+       if(n==0||n==1)
+              return 1;
+       return fib(n-1)+fib(n-2);
+}

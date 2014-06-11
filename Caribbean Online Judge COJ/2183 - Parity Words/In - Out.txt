@@ -1,0 +1,11 @@
+In:
+
+2
+abb
+aab
+
+
+Out:
+
+Even
+Odd
