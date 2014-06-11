@@ -7,7 +7,7 @@ using namespace std;
 *
 * Problema mas complicado del concurso, solucion trivial y larga de implementar.
 * Basicamente la idea aqui es crear un vector que represente el numero de columnas
-* y tres vectores que simulen a las piezas acorde a su tama�o y forma de caida (2, 3, o 4 cuadrados de area).
+* y tres vectores que simulen a las piezas acorde a su tamano y forma de caida (2, 3, o 4 cuadrados de area).
 * El siguiente paso es checar que pieza es dada, construirla con un vector, y para esa pieza dada,
 * verificar todas sus posibles posiciones y ver si encajan en el area de Tetris sin dejar ningun cuadrado libre
 * El area de Tetris y una pieza seran representados con un 0 para cuadrados vacios, y dependiendo de cuantos cuadrados
