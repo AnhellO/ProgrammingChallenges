@@ -7,10 +7,10 @@ using namespace std;
  
 struct cmp 
 {
-    bool operator()(const Node &a, const Node &b) 
-    {
-        return a.second > b.second;
-    }
+    	bool operator()(const Node &a, const Node &b) 
+    	{
+	    return a.second > b.second;
+    	}
 };
  
 int T, N, L, queries, S, D, q, i;
@@ -25,45 +25,45 @@ void init()
 	int i;
 	for(i = 0 ; i <= N ; i++)
 	{
-        dist[i] = MAX;
-        visited[i] = false;
-        prev[i] = -1;
-    }
+        	dist[i] = MAX;
+        	visited[i] = false;
+        	prev[i] = -1;
+    	}
 }
  
 void state(int actual, int next, int weight)
 {
-    if(dist[actual] + weight < dist[next])
-    {
-        dist[next] = dist[actual] + weight;
-        prev[next] = actual;
-        Q.push(Node(next, dist[next]));
-    }
+    	if(dist[actual] + weight < dist[next])
+    	{
+        	dist[next] = dist[actual] + weight;
+        	prev[next] = actual;
+        	Q.push(Node(next, dist[next]));
+    	}
 }
  
 void dijkstra(int a)
 {
 	init();
 	int i;
-    Q.push(Node(a, 0));
-    dist[a] = 0;
-    int actual, next, weight;
-    while(!Q.empty())
-    {
-        actual = Q.top().first;
-        Q.pop();
-        if(visited[actual]) continue;
-        visited[actual] = true;
-        for(i = 0 ; i < vertex[actual].size() ; i++)
-        {
-            next = vertex[actual][i].first;
-            weight = vertex[actual][i].second;
-            if(!visited[next])
-            {
-                state(actual, next, weight);
-            }
-        }
-    }
+    	Q.push(Node(a, 0));
+    	dist[a] = 0;
+    	int actual, next, weight;
+    	while(!Q.empty())
+    	{
+        	actual = Q.top().first;
+        	Q.pop();
+        	if(visited[actual]) continue;
+        	visited[actual] = true;
+        	for(i = 0 ; i < vertex[actual].size() ; i++)
+        	{
+            		next = vertex[actual][i].first;
+            		weight = vertex[actual][i].second;
+            		if(!visited[next])
+            		{
+                		state(actual, next, weight);
+            		}
+        	}
+	 }
 }
  
 int main() 
