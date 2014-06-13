@@ -22,7 +22,7 @@ class Main
 		BufferedReader r = new BufferedReader(new InputStreamReader(System.in)); //Buffer de lectura
 		BigInteger seventeen = new BigInteger("17"); //Numero 17 en BigInteger
 		BigInteger N = new BigInteger(r.readLine(), 2); //Creamos nuestra N, pasando como parametros al buffer del lectura (que devuelve
-														//un string), y a la base del numero
+								//un string), y a la base del numero
 		N = N.multiply(seventeen); //Multiplicamos y asignamos
 		System.out.println(N.toString(2)); //Imprimimos en base 2 o binario
 	}
