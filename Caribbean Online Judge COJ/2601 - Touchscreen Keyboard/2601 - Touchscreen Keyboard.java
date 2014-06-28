@@ -12,75 +12,75 @@ import java.io.InputStreamReader;
 */
 class TouchScreen 
 {
-    static int i;
-    static int j;
-    public static void main(String[] args) throws IOException 
-    {
-        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-	int k, x, cont, y, t, l, aux, distances[];
-        String base, p;
-        String div[], words[];
-        char matriz[][]={{'q','w','e','r','t','y','u','i','o','p'},
-            			{'a','s','d','f','g','h','j','k','l','\u0000'},
-            			{'z','x','c','v','b','n','m','\u0000','\u0000','\u0000'}};
+    	static int i;
+    	static int j;
+    	public static void main(String[] args) throws IOException 
+    	{
+        	BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+		int k, x, cont, y, t, l, aux, distances[];
+        	String base, p;
+        	String div[], words[];
+        	char matriz[][] = {{'q','w','e','r','t','y','u','i','o','p'},
+            			  {'a','s','d','f','g','h','j','k','l','\u0000'},
+            			  {'z','x','c','v','b','n','m','\u0000','\u0000','\u0000'}};
                 
-        t = Integer.parseInt(r.readLine());
+        	t = Integer.parseInt(r.readLine());
         
-        while(t-- > 0)
-        {
-            div = r.readLine().split(" ");
-            words = new String[Integer.parseInt(div[1])];
-            distances = new int[Integer.parseInt(div[1])];
-            for(k = 0 ; k < words.length ; k++)
-            {
-                words[k] = r.readLine();
-                for(cont = 0 ; cont < words[k].length() ; cont++)
-                {
-                    distances[k] += distancia(words[k].charAt(cont),div[0].charAt(cont),matriz);
-                }
-            }
-            for(k = 0 ; k < words.length ; k++)
-            {
-                for(y = 0 ; y < words.length - 1 ; y++)
-                {
-                    if(distances[y] > distances[y + 1])
-                    {
-                        aux = distances[y];
-                        distances[y] = distances[y + 1];
-                        distances[y + 1] = aux;
-                        base = words[y];
-                        words[y] = words[y + 1];
-                        words[y + 1] = base;
-                    }
-                }
-            }
-            for(x = 0 ; x < words.length - 1; x++)
-            {
-                if(distances[x + 1] == distances[x])
-                {
-                    for(k = 0 ; k < words.length ; k++)
-                    {
-                        for(y = 0 ; y < words.length - 1 ; y++)
-                        {
-                            if(words[y].compareTo(words[y + 1]) > 0 && distances[y] >= distances[y + 1])
-                            {
-                                aux = distances[y];
-                                distances[y] = distances[y + 1];
-                                distances[y + 1] = aux;
-                                base = words[y];
-                                words[y] = words[y + 1];
-                                words[y + 1] = base;
-                            }
-                        }
-                    }
-                }
-            }
-            for(k = 0 ; k < words.length ; k++)
-            {
-                System.out.println(words[k] + " " + distances[k]);
-            }
-        }
-    }
+        	while(t-- > 0)
+        	{
+            		div = r.readLine().split(" ");
+            		words = new String[Integer.parseInt(div[1])];
+            		distances = new int[Integer.parseInt(div[1])];
+            		for(k = 0 ; k < words.length ; k++)
+            		{
+                		words[k] = r.readLine();
+                		for(cont = 0 ; cont < words[k].length() ; cont++)
+        			{
+                    			distances[k] += distancia(words[k].charAt(cont),div[0].charAt(cont),matriz);
+                		}
+            		}
+            		for(k = 0 ; k < words.length ; k++)
+            		{
+                		for(y = 0 ; y < words.length - 1 ; y++)
+                		{
+                    			if(distances[y] > distances[y + 1])
+                    			{
+			                        aux = distances[y];
+			                        distances[y] = distances[y + 1];
+			                        distances[y + 1] = aux;
+			                        base = words[y];
+			                        words[y] = words[y + 1];
+			                        words[y + 1] = base;
+                    			}
+                		}
+            		}
+            		for(x = 0 ; x < words.length - 1; x++)
+            		{
+                		if(distances[x + 1] == distances[x])
+                		{
+                		    	for(k = 0 ; k < words.length ; k++)
+                    			{
+                        			for(y = 0 ; y < words.length - 1 ; y++)
+                        			{
+                            				if(words[y].compareTo(words[y + 1]) > 0 && distances[y] >= distances[y + 1])
+                            				{
+				                                aux = distances[y];
+				                                distances[y] = distances[y + 1];
+				                                distances[y + 1] = aux;
+				                                base = words[y];
+				                                words[y] = words[y + 1];
+				                                words[y + 1] = base;
+                            				}
+                				}
+                    			}
+                		}
+            		}
+	            	for(k = 0 ; k < words.length ; k++)
+	            	{
+	                	System.out.println(words[k] + " " + distances[k]);
+	            	}
+        	}
+    	}
         
 	static int distancia(char a, char b, char x[][])
 	{
@@ -130,9 +130,9 @@ class TouchScreen
 		return dist;
 	}
         
-    static void posicion(char a, char x[][])
-    {
-    	int e, f;
+    	static void posicion(char a, char x[][])
+    	{
+    		int e, f;
 		i = 0;
 		j = 0;
 		for(e = 0 ; e < 3 ; e++)
