@@ -1,0 +1,12 @@
+In:
+
+ABBA CCBB
+
+
+
+Out:
+
+.C..
+.C..
+ABBA
+.B..
