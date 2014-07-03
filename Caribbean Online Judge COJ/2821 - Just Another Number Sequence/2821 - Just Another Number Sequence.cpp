@@ -28,10 +28,10 @@ long long int solve(long long int N, long long int X)
 	else
 	{
 		result = multiply(N, power(X, N + 2)) - multiply((N + 1), power(X, N + 1)) + X;
-        result %= MOD;
-        if(result < 0) result += MOD;
-        result *= power(multiply((X - 1), (X - 1)), MOD - 2);
-        result %= MOD;
+        	result %= MOD;
+        	if(result < 0) result += MOD;
+        	result *= power(multiply((X - 1), (X - 1)), MOD - 2);
+        	result %= MOD;
 	}
 	return result;
 }
