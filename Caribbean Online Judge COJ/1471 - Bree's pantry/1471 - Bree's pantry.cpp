@@ -68,7 +68,6 @@ int main()
 			cin >> s >> j;
 			cans.push_back(make_pair(s, j));
 		}
-		//sort(cans.begin(), cans.end(), &predicate);
 		initBubbleSort();
 		flag = true;
 		for(i = N / 2, j = i - 1, k = 0 ; k < N ; k++)
