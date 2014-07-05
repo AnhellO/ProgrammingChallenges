@@ -128,17 +128,10 @@ AAT 20
 Out:
 
 Veg TOM SPG Swc XXX
-
 SAL Alm Tna
-
 aaa ccc eee ggg iii kkk mmm ooo qqq sss ttt rrr ppp nnn lll jjj hhh fff ddd bbb
-
 ttt rrr ppp nnn lll jjj hhh fff ddd bbb aaa ccc eee ggg iii kkk mmm ooo qqq sss
-
 aaF aad aAb Aaa aaC Aae
-
 aaa bbb ccc ddd eee fff ggg hhh iii jjj kkk lll mmm nnn ooo ppp qqq rrr sss
-
 AAT AAR AAP AAN AAL AAJ AAH AAF AAD AAB AAA AAC AAE AAG AAI AAK AAM AAO AAQ AAS
-
 AAA AAC AAE AAG AAI AAK AAM AAO AAQ AAS AAT AAR AAP AAN AAL AAJ AAH AAF AAD AAB
