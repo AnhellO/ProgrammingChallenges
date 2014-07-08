@@ -1,0 +1,10 @@
+In:
+
+lock
+like
+
+
+
+Out:
+
+3
