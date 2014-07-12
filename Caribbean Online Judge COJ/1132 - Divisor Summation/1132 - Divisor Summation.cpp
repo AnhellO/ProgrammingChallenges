@@ -10,8 +10,8 @@ int main()
         scanf("%d",&n);
         while(n--)
         {
-            scanf("%d",&num);
-            printf("%d\n",sumOfDivisors(num) - num);
+                scanf("%d",&num);
+                printf("%d\n",sumOfDivisors(num) - num);
         }
         return 0;
 }
