@@ -1,0 +1,10 @@
+In:
+
+5 3
+WBWWBWBWBWBBBWWBBB
+
+
+
+Out:
+
+27
