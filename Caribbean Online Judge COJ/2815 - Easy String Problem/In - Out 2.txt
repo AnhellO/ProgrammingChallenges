@@ -1,9 +1,0 @@
-In:
-
-1
-bcbcz abc
-
-
-Out:
-
-0

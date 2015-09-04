@@ -1,8 +1,0 @@
-In:
-
-2
-
-Out:
-
-1: I am participating in the Engineer's day.
-2: I am participating in the Engineer's day.

@@ -1,9 +1,0 @@
-In:
-
-hELLO
-
-
-
-Out:
-
-Hello

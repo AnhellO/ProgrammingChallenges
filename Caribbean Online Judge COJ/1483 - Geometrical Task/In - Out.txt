@@ -1,8 +1,0 @@
-In:
-
-rectangle 5 6
-
-
-Out:
-
-30
