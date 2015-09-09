@@ -20,6 +20,7 @@
 #include <fstream>
 #define INF 1000000000000
 #define MAX 1000000
+#define MOD 10000007
 using namespace std;
 
 typedef pair<int, int> ii;
