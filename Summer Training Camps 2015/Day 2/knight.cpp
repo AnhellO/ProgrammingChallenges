@@ -35,12 +35,43 @@ typedef map<string, int> msi;
 typedef map<int, ii> miii;
 
 int main() {
-    cin.tie(0);
-    ios::sync_with_stdio(0);
-    /*ifstream file("a.in");
-	if(file) freopen("a.in", "rt", stdin);
-	ofstream output("a.out");
-    output.close();*/
+	int n, m;
 
-    return 0;
+	cin.tie(0);
+	ios::sync_with_stdio(0);
+	ifstream file("knight.in");
+	if(file) freopen("knight.in", "rt", stdin);
+	ofstream output("knight.out");
+
+	cin >> n >> m;
+	int f[n][m];
+	for (int i = 0 ; i < n; i++){
+			for(int j = 0 ; j < m ; j++){
+				f[i][j] = 0;
+			}
+	}
+	f[0][0] = 1;
+	for (int i = 0 ; i < n; i++){
+		for(int j = 0 ; j < m ; j++){
+			if(i == 1 && j > 1){
+				f[i][j] = f[i-1][j-2];
+			}
+			else if(j == 1 && i > 1){
+				f[i][j] = f[i-2][j-1];
+			}
+			else if(j > 1 && i > 1){
+				f[i][j] = f[i-1][j-2] + f[i-2][j-1];
+			}
+		}
+	}
+	/*for (int i = 0 ; i < n; i++){
+			for(int j = 0 ; j < m ; j++){
+				cout << f[i][j] << " ";
+			}
+			cout << "\n" ;
+	}*/
+	output << f[n-1][m-1] << "\n";
+
+	output.close();
+	return 0;
 }
