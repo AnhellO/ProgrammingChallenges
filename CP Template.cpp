@@ -18,6 +18,7 @@
 #include <iomanip>
 #include <utility>
 #include <fstream>
+#include <functional>
 #define INF 1000000000000
 #define MAX 1000000
 #define MOD 10000007
