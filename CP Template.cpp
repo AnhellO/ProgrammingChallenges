@@ -22,7 +22,7 @@
 #define INF 1000000000000
 #define MAX 1000000
 #define MOD 10000007
-#define size(arr) (sizeof(arr)/sizeof(arr[0]))
+#define len(arr) (sizeof(arr)/sizeof(arr[0]))
 #define for_each(type, it, cont) for(type::iterator it = cont.begin() ; it != cont.end() ; ++it)
 using namespace std;
 
