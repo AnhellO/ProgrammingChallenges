@@ -20,18 +20,13 @@
 #include <fstream>
 #define INF 1000000000000
 #define MAX 1000000
-#define MOD 10000007
-#define size(arr) (sizeof(arr)/sizeof(arr[0]))
-#define for_each(type, it, cont) for(type::iterator it = cont.begin() ; it != cont.end() ; ++it)
 using namespace std;
 
 typedef pair<int, int> ii;
 typedef pair<int, ii> iii;
 typedef vector<int> vi;
-typedef vector<vi> vivi;
 typedef vector<ii> vii;
 typedef vector<iii> viii;
-typedef vector<vii> vvii;
 typedef map<int, int> mii;
 typedef map<char, int> mci;
 typedef map<string, int> msi;
@@ -44,7 +39,29 @@ int main() {
 	if(file) freopen("a.in", "rt", stdin);
 	ofstream output("a.out");
     output.close();*/
-
-    return 0;
+    int n;
+    while(cin >> n && n) {
+        map<vi, int> m;
+        while(n--) {
+            vector<int> v(5);
+            for(int i = 0 ; i < 5 ; i++) {
+                cin >> v[i];
+            }
+            sort(v.begin(), v.end());
+            m[v]++;
+        }
+        int mode = 0;
+        for(map<vi, int>::iterator it = m.begin() ; it != m.end() ; ++it) {
+            if(it->second >= mode) {
+                mode = it->second;
+            }
+        }
+        int cont = 0;
+        for(map<vi, int>::iterator it = m.begin() ; it != m.end() ; ++it) {
+            if(it->second == mode) {
+                cont += mode;
+            }
+        }
+        cout << cont << '\n';
+    }
 }
-
