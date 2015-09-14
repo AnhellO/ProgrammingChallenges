@@ -40,9 +40,9 @@ typedef map<int, ii> miii;
 int main() {
     cin.tie(0);
     ios::sync_with_stdio(0);
-    /*ifstream file("a.in");
-	if(file) freopen("a.in", "rt", stdin);
-	ofstream output("a.out");
+    /*ifstream file("a.in");if(file)
+    freopen("a.in", "rt", stdin);
+    ofstream output("a.out");
     output.close();*/
 
     return 0;
