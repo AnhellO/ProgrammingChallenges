@@ -36,8 +36,8 @@ int main() {
     cin.tie(0);
     ios::sync_with_stdio(0);
     //ifstream file("icanguess.txt");
-	//if(file) freopen("icanguess.txt", "rt", stdin);
-	//ofstream output("icanguess.out");
+    //if(file) freopen("icanguess.txt", "rt", stdin);
+    //ofstream output("icanguess.out");
     int n;
     while(cin >> n) {
         stack<int> si;
