@@ -39,7 +39,7 @@ typedef map<string, int> msi;
 typedef map<int, ii> miii;
 
 int main() {
-	cin.tie(0);
+    cin.tie(0);
     ios::sync_with_stdio(0);
     /*ifstream file("a.in");if(file)
     freopen("a.in", "rt", stdin);
