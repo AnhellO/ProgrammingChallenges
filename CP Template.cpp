@@ -23,7 +23,6 @@
 #define MAX 1000000
 #define MOD 10000007
 #define len(arr) (sizeof(arr)/sizeof(arr[0]))
-#define for_each(type, it, cont) for(type::iterator it = cont.begin() ; it != cont.end() ; ++it)
 using namespace std;
 
 typedef pair<int, int> ii;
