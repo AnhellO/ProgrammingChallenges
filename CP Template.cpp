@@ -28,6 +28,7 @@ using namespace std;
 typedef pair<int, int> ii;
 typedef pair<int, ii> iii;
 typedef vector<int> vi;
+typedef vector<string> vs;
 typedef vector<vi> vvi;
 typedef vector<ii> vii;
 typedef vector<iii> viii;
@@ -36,6 +37,10 @@ typedef map<int, int> mii;
 typedef map<char, int> mci;
 typedef map<string, int> msi;
 typedef map<int, ii> miii;
+typedef map<string, string> mss;
+typedef map<string, vs> msvs;
+typedef long long int lli;
+typedef unsigned long long int ulli;
 
 int main() {
 	cin.tie(0);
