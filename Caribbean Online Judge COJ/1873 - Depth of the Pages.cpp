@@ -22,9 +22,9 @@ int prev[MAX];
  
 void init()
 {
-	int i;
-	for(i = 0 ; i <= N ; i++)
-	{
+    int i;
+    for(i = 0 ; i <= N ; i++)
+    {
         dist[i] = MAX;
         visited[i] = false;
         prev[i] = -1;
@@ -43,8 +43,8 @@ void state(int actual, int next, int weight)
  
 void dijkstra(int a)
 {
-	init();
-	int i;
+    init();
+    int i;
     Q.push(Node(a, 0));
     dist[a] = 0;
     int actual, next, weight;
