@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : CPP.cpp
-// Author      : Angel Santiago Jaime Zavala
-// Version     :
-// Copyright   : GPL
-// Description : UVa 11503 - Virtual Friends
-//============================================================================
-
 #include <iostream>
 #include <cstdio>
 #include <cstring>
@@ -87,10 +79,6 @@ int sizeOfSet(int i) {
 int main() {
 	cin.tie(0);
 	ios::sync_with_stdio(0);
-	/*ifstream file("a.in");if(file)
-	freopen("a.in", "rt", stdin);
-	ofstream output("a.out");
-	output.close();*/
 	int T, F;
 	string s1, s2;
 	cin >> T;
