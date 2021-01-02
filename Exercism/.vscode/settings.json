@@ -1,5 +1,0 @@
-{
-    "go.inferGopath": false,
-    "python.linting.enabled": true,
-    "python.pythonPath": "/usr/local/bin/python3"
-}
