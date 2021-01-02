@@ -1,2 +1,5 @@
 testdata
 random
+.vscode
+.pytest_cache
+.DS_Store
